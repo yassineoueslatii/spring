@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="articleDao" class="com.yassine.dao.impl.ArticleDaoImpl"></bean>	
+	<bean id="articleService" class="com.yassine.service.Impl.ArticleServiceImpl">
+	<property name="dao" ref="articleDao"></property>
+	
+	</bean>
+	<bean id="categoryDao" class="com.yassine.dao.impl.CategoryDaoImpl"></bean>
+	<bean id="categoryService" class="com.yassine.service.Impl.CategoryServiceImpl">
+	<property name="dao" ref="categoryDao"></property>
+	</bean>
+	<bean id="clientDao" class="com.yassine.dao.impl.ClientDaoImpl"></bean>
+	<bean id="clientService" class="com.yassine.service.Impl.ClientServiceImpl">
+	<property name="dao" ref="clientDao"></property>
+	</bean>
+	<bean id="FlickrDao" class="com.yassine.dao.impl.FlickrDaoImlp"></bean>
+	<bean id="FlickrService" class="com.yassine.service.Impl.FlickrServiceImpl">
+	<property name="dao" ref="FlickrDao"></property>
+	</bean>
+	<bean id="commandeclientDao" class="com.yassine.dao.impl.CommandeClientDaoImpl"></bean>
+	<bean id="commandeclientService" class="com.yassine.service.Impl.CommandeClientServiceImpl">
+	<property name="dao" ref="commandeclientDao"></property>
+	</bean>
+	<bean id="lignecommandeclientDao" class="com.yassine.dao.impl.LigneCommandeClientDaoImpl"></bean>
+	<bean id="lignecommandeclientService" class="com.yassine.service.Impl.LigneCommandeClientServiceImpl">
+	<property name="dao" ref="lignecommandeclientDao"></property>
+	</bean>
+	
+	
+		
+		
+	
+		</beans>
+		
+	
